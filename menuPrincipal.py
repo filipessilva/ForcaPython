@@ -10,6 +10,9 @@ this.campo = ""
 
 
 def menu():
+    print('\n/****************/')
+    print( '/* FORCA PYTHON */')
+    print('/****************/')
     print('\nEscolha uma das opções abaixo: \n\n' +
           '1. JOGAR FORCA PYTHON !\n' +
           '2. Alterar Dados Cadastrais\n' +
@@ -43,6 +46,9 @@ def operacao():
 
 
 def menu2():
+    print('\n/****************/')
+    print( '/* FORCA PYTHON */')
+    print('/****************/')
     print('\nEscolha uma das opções abaixo: \n\n' +
           '1. Atualizar Nome\n' +
           '2. Atulizar Usuario\n' +
