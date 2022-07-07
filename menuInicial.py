@@ -13,7 +13,7 @@ def menu():
     print('\nEscolha uma das opções abaixo: \n\n' +
           '1. Login\n' +
           '2. Cadastro\n' +
-          '3. Esqueci a senha\n' +
+          '3. Esqueci meu usuario/senha\n' +
           '0. Sair')
     this.opcao = int(input())
 
