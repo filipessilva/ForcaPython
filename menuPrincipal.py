@@ -39,6 +39,7 @@ def operacao():
             print("Informe seu CPF para excluir a conta")
             this.CPF = int(input())
             operacoesBD.excluir(this.CPF)
+            exit()
 
 
         else:

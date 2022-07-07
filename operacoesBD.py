@@ -11,7 +11,7 @@ def inserirCadastro(CPF, nome, usuario, senha, email, dataDeNascimento):
         sql = "insert into cadastro(cpf,nome,usuario,senha,email,dataDeNascimento) values ('{}', '{}', '{}', '{}', '{}', '{}')".format(CPF, nome, usuario, senha, email, tratarData(dataDeNascimento))
         con.execute(sql)
         db_connection.commit()
-        print("{} Inseridos".format(con.rowcount))
+        print("{} CADASTRO REALIZADO!".format(con.rowcount))
 
     except Exception as erro:
         return erro
@@ -59,5 +59,16 @@ def excluir(CPF):
         con.execute(sql)
         db_connection.commit()
         print('{} CONTA EXLUIDA!'.format(con.rowcount))
+    except Exception as erro:
+        print(erro)
+
+def consultarLoginSenha(cpf):
+    try:
+        sql = "select usuario,senha from cadastro where CPF ='{}'".format(cpf)
+        con.execute(sql)
+
+        for (usuario, senha) in con:
+            print('Usuario: {}\nSenha: {}'.format( usuario, senha))
+        print('\n')
     except Exception as erro:
         print(erro)

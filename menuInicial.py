@@ -49,5 +49,10 @@ def operacao():
             # Chamar o metodo inserir
             operacoesBD.inserirCadastro(CPF, nome, usuario, senha, email, dtNasc)
 
+        elif this.opcao ==3:
+            print('Informe o CPF de seu cadastro:')
+            this.cpf = input();
+            operacoesBD.consultarLoginSenha(this.cpf)
+
         else:
             print('Opção escolhida não é válida!')
