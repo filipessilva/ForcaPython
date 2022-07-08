@@ -70,32 +70,47 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe o novo nome: ")
             this.campo = input()
-            operacoesBD.atualizar(this.CPF, 'nome', this.campo )
+            if this.CPF or this.campo == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.atualizar(this.CPF, 'nome', this.campo )
 
         elif this.opcao3 == 2:
             print("Informe o CPF para atualizar o dado desejado")
             this.CPF = int(input())
             print("Informe o novo usuario: ")
             this.campo = input()
-            operacoesBD.atualizar(this.CPF, 'usuario', this.campo )
+            if this.CPF or this.campo == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.atualizar(this.CPF, 'usuario', this.campo )
 
         elif this.opcao3 == 3:
             print("Informe o CPF para atualizar o dado desejado")
             this.CPF = int(input())
             print("Informe a nova senha: ")
             this.campo = input()
-            operacoesBD.atualizar(this.CPF, 'senha', this.campo )
+            if this.CPF or this.campo == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.atualizar(this.CPF, 'senha', this.campo )
 
         elif this.opcao3 == 4:
             print("Informe o CPF para atualizar o dado desejado")
             this.CPF = int(input())
             print("Informe o novo email: ")
             this.campo = input()
-            operacoesBD.atualizar(this.CPF,'email', this.campo)
+            if this.CPF or this.campo == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.atualizar(this.CPF,'email', this.campo)
 
         elif this.opcao3 == 5:
             print("Informe o CPF para atualizar o dado desejado")
             this.CPF = int(input())
             print("Informe a nova data de nascimento: ")
             this.campo = input()
-            operacoesBD.atualizar(this.CPF, 'dataDeNascimento', operacoesBD.tratarData(this.campo))
+            if this.CPF or this.campo == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.atualizar(this.CPF, 'dataDeNascimento', operacoesBD.tratarData(this.campo))

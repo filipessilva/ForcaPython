@@ -31,7 +31,10 @@ def operacao():
             usuarioo = input()
             print('Informe a senha:')
             senhaa = input()
-            operacoesBD.verificarLogin(usuarioo, senhaa)
+            if usuarioo == '' or senhaa == '':
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.verificarLogin(usuarioo, senhaa)
 
         elif this.opcao == 2:
             print('Informe seu CPF:')
@@ -46,13 +49,18 @@ def operacao():
             email = input()
             print('Informar sua data de nascimento: ')
             dtNasc = input()
-            # Chamar o metodo inserir
-            operacoesBD.inserirCadastro(CPF, nome, usuario, senha, email, dtNasc)
+            if usuario == '' or senha == '' or CPF == '' or nome == '' or email == '' or dtNasc =='' :
+                print('Preencha todos os campos!')
+            else:
+                operacoesBD.inserirCadastro(CPF, nome, usuario, senha, email, dtNasc)
 
         elif this.opcao ==3:
             print('Informe o CPF de seu cadastro:')
             this.cpf = input();
-            operacoesBD.consultarLoginSenha(this.cpf)
+            if this.cpf == '':
+                print('Preencha o campo!')
+            else:
+                operacoesBD.consultarLoginSenha(this.cpf)
 
         else:
             print('Opção escolhida não é válida!')
