@@ -70,7 +70,7 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe o novo nome: ")
             this.campo = input()
-            if this.CPF or this.campo == '':
+            if this.CPF == '' or this.campo == '':
                 print('Preencha todos os campos!')
             else:
                 operacoesBD.atualizar(this.CPF, 'nome', this.campo )
@@ -80,7 +80,7 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe o novo usuario: ")
             this.campo = input()
-            if this.CPF or this.campo == '':
+            if this.CPF == '' or this.campo == '':
                 print('Preencha todos os campos!')
             else:
                 operacoesBD.atualizar(this.CPF, 'usuario', this.campo )
@@ -90,7 +90,7 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe a nova senha: ")
             this.campo = input()
-            if this.CPF or this.campo == '':
+            if this.CPF == '' or this.campo == '':
                 print('Preencha todos os campos!')
             else:
                 operacoesBD.atualizar(this.CPF, 'senha', this.campo )
@@ -100,7 +100,7 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe o novo email: ")
             this.campo = input()
-            if this.CPF or this.campo == '':
+            if this.CPF == '' or this.campo == '':
                 print('Preencha todos os campos!')
             else:
                 operacoesBD.atualizar(this.CPF,'email', this.campo)
@@ -110,7 +110,7 @@ def alterarDadosCadastrais():
             this.CPF = int(input())
             print("Informe a nova data de nascimento: ")
             this.campo = input()
-            if this.CPF or this.campo == '':
+            if this.CPF == '' or this.campo == '':
                 print('Preencha todos os campos!')
             else:
                 operacoesBD.atualizar(this.CPF, 'dataDeNascimento', operacoesBD.tratarData(this.campo))
